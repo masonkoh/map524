@@ -1,7 +1,13 @@
 <resources>
     <string name="app_name">L1YOUNGMIN</string>
     <string name="devName">Youngmin Ko</string>
-    <string name="username">username</string>
+    <string name="username">USERNAME</string>
     <string name="hello_toronto">Hello Toronto</string>
     <string name="facebook">facebook</string>
+    <string name="password">PASSWORD</string>
+    <string name="twitter">twitter</string>
+    <string name="york">YORK</string>
+    <string name="ryerson">ryerson</string>
+    <string name="humber">humber</string>
+    <string name="seneca">seneca</string>
 </resources>

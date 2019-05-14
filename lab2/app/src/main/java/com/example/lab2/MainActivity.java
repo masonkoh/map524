@@ -5,16 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
-/*
-
-Objective - become familiar with Java and XML
-The user first types a username and password
-The user then clicks on one of the buttons
-The button text will change, based on the username and /or password
-
-*/
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -22,18 +13,32 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-//        Button loginBtn = (Button) findViewById(R.id.loginBtn);
-//
-//        loginBtn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//
-//                EditText loginEditText = (EditText) findViewById(R.id.loginEditText);
-//                Toast.makeText(getApplicationContext(), "Username: ", Toast.LENGTH_SHORT).show();
-//
-//
-////                loginBtn.setText(loginEditText.getText().toString()); // just inclass note
-//            }
-//        });
+        final Button usernameBtn = (Button) findViewById(R.id.usernameBtn);
+        final Button passwordBtn = (Button) findViewById(R.id.passwordBtn);
+        final Button usernameAndPasswordBtn = (Button) findViewById(R.id.usernameAndPasswordBtn);
+
+        usernameBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                EditText user = (EditText) findViewById(R.id.IDEditText);
+                usernameBtn.setText(user.getText().toString());
+            }
+        });
+        passwordBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                EditText user = (EditText) findViewById(R.id.passwordEditText);
+                passwordBtn.setText(user.getText().toString());
+            }
+        });
+        usernameAndPasswordBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                EditText user1 = (EditText) findViewById(R.id.IDEditText);
+                EditText user2 = (EditText) findViewById(R.id.passwordEditText);
+                usernameAndPasswordBtn.setText(user1.getText().toString() + " AND " + user2.getText().toString());
+            }
+        });
+
     }
 }

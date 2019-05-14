@@ -1,5 +1,6 @@
 package com.example.lab2;
 
+import android.content.res.Resources;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -36,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 EditText user1 = (EditText) findViewById(R.id.IDEditText);
                 EditText user2 = (EditText) findViewById(R.id.passwordEditText);
+
                 usernameAndPasswordBtn.setText(user1.getText().toString() + " AND " + user2.getText().toString());
             }
         });

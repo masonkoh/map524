@@ -4,7 +4,10 @@
 ![Language](https://img.shields.io/badge/language-Java%20and%20XML-orange.svg)
 ![designedFor](https://img.shields.io/badge/designedFor-Android%20Phone%2C%20Tablet-green.svg)
 
+* MAP524 Summer 2019 @ Seneca College
+
 ### Android Apps
 |Name|Description|Note|
 |----|----|----|
 Lab 1|basic XML file editing||
+|Lab 2|||

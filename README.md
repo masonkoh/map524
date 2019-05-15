@@ -10,4 +10,5 @@
 |Name|Description|Note|
 |----|----|----|
 Lab 1|basic XML file editing||
-|Lab 2|||
+|Lab 2|basic java||
+Lab 3|basic intent (passing data)||

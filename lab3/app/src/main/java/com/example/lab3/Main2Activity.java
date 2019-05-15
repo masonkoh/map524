@@ -18,10 +18,7 @@ public class Main2Activity extends AppCompatActivity {
         Intent intent = getIntent();
         String tempString = intent.getStringExtra("firstExtra");
 
-
         Button homeBtn = (Button) findViewById(R.id.homeBtn);
-
-
         TextView usernameIsTextView = findViewById(R.id.usernameIsTextView);
         usernameIsTextView.setText("username is " + tempString);
 

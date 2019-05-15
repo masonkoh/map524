@@ -9,4 +9,6 @@
     <string name="label">L3 YOUNGMIN KO</string>
     <string name="username_is">Username is</string>
     <string name="home">home</string>
+    <string name="password_is">Password is</string>
+
 </resources>

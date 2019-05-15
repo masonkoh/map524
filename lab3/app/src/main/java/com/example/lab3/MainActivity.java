@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
         Button passwordBtn = (Button) findViewById(R.id.passwordBtn);
         Button loginBtn = (Button) findViewById(R.id.loginBtn);
         final EditText IDEditText = (EditText) findViewById(R.id.IDEditText);
-        EditText passwordEditText = (EditText) findViewById(R.id.passwordEditText);
+        final EditText passwordEditText = (EditText) findViewById(R.id.passwordEditText);
 
         usernameBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, Main3Activity.class);
+                intent.putExtra("secondExtra", passwordEditText.getText().toString());
                 startActivity(intent);
             }
         });
@@ -40,6 +41,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, Main4Activity.class);
+                intent.putExtra("firstExtra", IDEditText.getText().toString());
+                intent.putExtra("secondExtra", passwordEditText.getText().toString());
                 startActivity(intent);
             }
         });

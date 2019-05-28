@@ -32,7 +32,7 @@ public class QuizActivity extends AppCompatActivity {
     };
 
     private int mCurrentIndex = 0;
-    private boolean mIsCheater;
+    private boolean mIsCheater; // mk_note: will be deleted after implementing new boolean variable in Question arrays
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,7 +43,7 @@ public class QuizActivity extends AppCompatActivity {
         if (savedInstanceState != null) {
             mCurrentIndex = savedInstanceState.getInt(KEY_INDEX, 0);
         }
-
+        /**/
         mQuestionTextView = (TextView) findViewById(R.id.question_text_view);
 
         mTrueButton = (Button) findViewById(R.id.true_button);
@@ -139,6 +139,7 @@ public class QuizActivity extends AppCompatActivity {
     private void updateQuestion() {
         int question = mQuestionBank[mCurrentIndex].getTextResId();
         mQuestionTextView.setText(question);
+        Toast.makeText(this, question, Toast.LENGTH_LONG); // mk_added
     }
 
     private void checkAnswer(boolean userPressedTrue) {
@@ -160,3 +161,4 @@ public class QuizActivity extends AppCompatActivity {
                 .show();
     }
 }
+

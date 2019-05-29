@@ -17,19 +17,18 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         String[] arrayAlphabet = {"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"};
-        Log.d("ㅅㅂMK_LOGCAT","arrayAlphabet:" + Arrays.toString(arrayAlphabet));
-        Integer[] arrayNumber  = new Integer[99];
-
-        for (int i = 1; i < 100; i++){
-            arrayNumber[i-1] = 7 * i;
+        Integer[] arrayNumber = new Integer[99];
+        for (int i = 1; i < 100; i++) {
+            arrayNumber[i - 1] = 7 * i;
         }
-        Log.d("ㅅㅂMK_LOGCAT", "arrayNumber: " + Arrays.toString(arrayNumber));
+        Log.d("MK_LOGCAT", "arrayAlphabet:" + Arrays.toString(arrayAlphabet));
+        Log.d("MK_LOGCAT", "arrayNumber: " + Arrays.toString(arrayNumber));
 
-        ArrayAdapter<String>arrayAdapterAlphabet = new ArrayAdapter<>(this, R.layout.mk_custom_layout1, arrayAlphabet);
+        ArrayAdapter<String> arrayAdapterAlphabet = new ArrayAdapter<>(this, R.layout.mk_custom_layout1, arrayAlphabet);
         ListView listViewAlphabet = findViewById(R.id.arrayAlphabetList);
         listViewAlphabet.setAdapter(arrayAdapterAlphabet);
 
-        ArrayAdapter<Integer>arrayAdapterNumber = new ArrayAdapter<>(this, R.layout.mk_custom_layout2, arrayNumber);
+        ArrayAdapter<Integer> arrayAdapterNumber = new ArrayAdapter<>(this, R.layout.mk_custom_layout2, arrayNumber);
         GridView gridViewNumber = findViewById(R.id.arrayNumberList);
         gridViewNumber.setAdapter(arrayAdapterNumber);
 

@@ -12,3 +12,5 @@
 Lab 1|basic XML file editing||
 |Lab 2|basic java||
 Lab 3|basic intent (passing data)||
+|Lab 4|ListView and GridView||
+Assignment 1|RadioGroup(button), advanced layout||

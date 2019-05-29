@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">assignment1</string>
+    <string name="hello_toronto">Hello Toronto</string>
+    <string name="bonjour_world">Bonjour World</string>
+    <string name="hi_seneca">Hi Seneca</string>
+</resources>

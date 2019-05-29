@@ -96,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
         redBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (redBtn.isChecked()){
+                if (redBtn.isChecked()) {
                     Toast.makeText(getApplicationContext(), "red", Toast.LENGTH_SHORT).show();
                 }
             }
@@ -104,7 +104,7 @@ public class MainActivity extends AppCompatActivity {
         yellowBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (yellowBtn.isChecked()){
+                if (yellowBtn.isChecked()) {
                     Toast.makeText(getApplicationContext(), "yellow", Toast.LENGTH_SHORT).show();
                 }
             }
@@ -112,7 +112,7 @@ public class MainActivity extends AppCompatActivity {
         greenBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (greenBtn.isChecked()){
+                if (greenBtn.isChecked()) {
                     Toast.makeText(getApplicationContext(), "green", Toast.LENGTH_SHORT).show();
                 }
             }
@@ -122,20 +122,18 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 StringBuffer colors = new StringBuffer();
-                if(redBtn.isChecked()){
+                if (redBtn.isChecked()) {
                     colors.append("red ");
                 }
-                if(yellowBtn.isChecked()){
+                if (yellowBtn.isChecked()) {
                     colors.append("yellow ");
                 }
-                if(greenBtn.isChecked()){
+                if (greenBtn.isChecked()) {
                     colors.append("green ");
                 }
                 Toast.makeText(getApplicationContext(), colors, Toast.LENGTH_SHORT).show();
             }
         });
-
-
 
 
     }

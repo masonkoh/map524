@@ -3,14 +3,10 @@ package com.example.lab4;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
-import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.GridView;
 import android.widget.ListView;
-import android.widget.TextView;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 
 public class MainActivity extends AppCompatActivity {
@@ -29,11 +25,11 @@ public class MainActivity extends AppCompatActivity {
         }
         Log.d("ㅅㅂMK_LOGCAT", "arrayNumber: " + Arrays.toString(arrayNumber));
 
-        ArrayAdapter<String>arrayAdapterAlphabet = new ArrayAdapter<>(this, R.layout.support_simple_spinner_dropdown_item, arrayAlphabet);
+        ArrayAdapter<String>arrayAdapterAlphabet = new ArrayAdapter<>(this, R.layout.mk_custom_layout1, arrayAlphabet);
         ListView listViewAlphabet = findViewById(R.id.arrayAlphabetList);
         listViewAlphabet.setAdapter(arrayAdapterAlphabet);
 
-        ArrayAdapter<Integer>arrayAdapterNumber = new ArrayAdapter<>(this, R.layout.support_simple_spinner_dropdown_item, arrayNumber);
+        ArrayAdapter<Integer>arrayAdapterNumber = new ArrayAdapter<>(this, R.layout.mk_custom_layout2, arrayNumber);
         GridView gridViewNumber = findViewById(R.id.arrayNumberList);
         gridViewNumber.setAdapter(arrayAdapterNumber);
 

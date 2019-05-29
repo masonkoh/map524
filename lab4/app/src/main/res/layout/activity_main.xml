@@ -13,9 +13,6 @@
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="0dp">
 
-        <!--<Space-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="13sp" />-->
 
         <TextView
             android:id="@+id/textView"
@@ -26,7 +23,7 @@
             android:textAlignment="center"
             android:textColor="#ffff00"
             android:textSize="30sp"
-            android:textStyle="bold" />
+             />
 
         <LinearLayout
             android:layout_width="match_parent"

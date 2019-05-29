@@ -3,4 +3,8 @@
     <string name="hello_toronto">Hello Toronto</string>
     <string name="bonjour_world">Bonjour World</string>
     <string name="hi_seneca">Hi Seneca</string>
+    <string name="COLOURS">COLOURS</string>
+    <string name="red">Red</string>
+    <string name="yellow">Yellow</string>
+    <string name="green">Green</string>
 </resources>

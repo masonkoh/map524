@@ -13,14 +13,12 @@
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="0dp">
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="10dp" />
 
         <TextView
             android:id="@+id/hellotorontobar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
             android:background="#0000ff"
             android:text="@string/hello_toronto"
             android:textAlignment="center"
@@ -53,21 +51,25 @@
                     android:textSize="15sp" />
 
                 <RadioButton
+                    android:id="@+id/aliceRadioBtn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Alice" />
 
                 <RadioButton
+                    android:id="@+id/bobRadioBtn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Bob" />
 
                 <RadioButton
+                    android:id="@+id/carolRadioBtn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Carol" />
 
                 <Button
+                    android:id="@+id/sayBonjourBtn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Say Bonjour" />
@@ -89,21 +91,25 @@
                     android:textSize="15sp" />
 
                 <RadioButton
+                    android:id="@+id/daveRadioBtn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Dave" />
 
                 <RadioButton
+                    android:id="@+id/eveRadioBtn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Eve" />
 
                 <RadioButton
+                    android:id="@+id/fredRadioBtn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Fred" />
 
                 <Button
+                    android:id="@+id/sayHiBtn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Say Hi" />
@@ -118,11 +124,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
-            android:orientation="horizontal">
+            android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5sp">
 
                 <CheckBox
                     android:id="@+id/redBtn"
@@ -136,9 +143,13 @@
                     android:id="@+id/yellowBtn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="5sp"
+                    android:layout_marginRight="5dp"
                     android:layout_weight="0.3"
                     android:background="#ffff00"
-                    android:text="@string/yellow" />
+                    android:text="@string/yellow"
+
+                    />
 
 
                 <CheckBox
@@ -150,22 +161,23 @@
                     android:text="@string/green" />
 
 
-
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <TextView
-                    android:id="@+id/colors"
+                <Button
+                    android:id="@+id/colorsBtn"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="#D6D7D7"
                     android:text="@string/COLOURS"
                     android:textAlignment="center"
                     android:textColor="#000000"
-                    android:textSize="25sp"
+                    android:textSize="20sp"
                     android:textStyle="bold" />
+
 
             </LinearLayout>
 

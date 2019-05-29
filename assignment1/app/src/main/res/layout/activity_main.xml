@@ -42,7 +42,7 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/BonjourWorld"
+                    android:id="@+id/bonjourWorldTextView"
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
                     android:layout_weight="0.5"
@@ -50,23 +50,31 @@
                     android:textColor="#797979"
                     android:textSize="15sp" />
 
-                <RadioButton
-                    android:id="@+id/aliceRadioBtn"
+                <RadioGroup
+                    android:id="@+id/firstRadioGroup"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Alice" />
+                    android:layout_height="wrap_content">
 
-                <RadioButton
-                    android:id="@+id/bobRadioBtn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Bob" />
+                    <RadioButton
+                        android:id="@+id/aliceRadioBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Alice" />
 
-                <RadioButton
-                    android:id="@+id/carolRadioBtn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Carol" />
+                    <RadioButton
+                        android:id="@+id/bobRadioBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Bob" />
+
+                    <RadioButton
+                        android:id="@+id/carolRadioBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Carol" />
+
+                </RadioGroup>
+
 
                 <Button
                     android:id="@+id/sayBonjourBtn"
@@ -82,7 +90,7 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/hiseneca"
+                    android:id="@+id/hiSenecaTextView"
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
                     android:layout_weight="0.5"
@@ -90,23 +98,31 @@
                     android:textColor="#797979"
                     android:textSize="15sp" />
 
-                <RadioButton
-                    android:id="@+id/daveRadioBtn"
+                <RadioGroup
+                    android:id="@+id/secondRadioGroup"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Dave" />
+                    android:layout_height="wrap_content">
 
-                <RadioButton
-                    android:id="@+id/eveRadioBtn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Eve" />
+                    <RadioButton
+                        android:id="@+id/daveRadioBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Dave" />
 
-                <RadioButton
-                    android:id="@+id/fredRadioBtn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Fred" />
+                    <RadioButton
+                        android:id="@+id/eveRadioBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Eve" />
+
+                    <RadioButton
+                        android:id="@+id/fredRadioBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Fred" />
+
+                </RadioGroup>
+
 
                 <Button
                     android:id="@+id/sayHiBtn"

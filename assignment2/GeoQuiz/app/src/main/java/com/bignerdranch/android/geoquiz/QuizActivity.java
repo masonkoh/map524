@@ -27,10 +27,10 @@ public class QuizActivity extends AppCompatActivity {
     private Question[] mQuestionBank = new Question[]{
             new Question(R.string.question_australia, true, false, false, false, R.string.hint_australia),
             new Question(R.string.question_oceans, true, false, false, false, R.string.hint_oceans),
-            new Question(R.string.question_mideast, false, false, false, false, R.string.question_oceans),
-            new Question(R.string.question_africa, false, false, false, false, R.string.hint_oceans),
-            new Question(R.string.question_americas, true, false, false, false, R.string.hint_oceans),
-            new Question(R.string.question_asia, true, false, false, false, R.string.hint_oceans),
+            new Question(R.string.question_mideast, false, false, false, false, R.string.hint_mideast),
+            new Question(R.string.question_africa, false, false, false, false, R.string.hint_africa),
+            new Question(R.string.question_americas, true, false, false, false, R.string.hint_americas),
+            new Question(R.string.question_asia, true, false, false, false, R.string.hint_asia),
     };
 
     private int mCurrentIndex = 0;
@@ -88,13 +88,24 @@ public class QuizActivity extends AppCompatActivity {
             }
         });
 
+//        mCheatButton = (Button) findViewById(R.id.cheat_button);
+//        mCheatButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                boolean answerIsTrue = mQuestionBank[mCurrentIndex].isAnswerTrue();
+//                Intent intent = CheatActivity.newIntent(QuizActivity.this, answerIsTrue);
+//                startActivityForResult(intent, REQUEST_CODE_CHEAT);
+//            }
+//        });
         mCheatButton = (Button) findViewById(R.id.cheat_button);
         mCheatButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                boolean answerIsTrue = mQuestionBank[mCurrentIndex].isAnswerTrue();
-                Intent intent = CheatActivity.newIntent(QuizActivity.this, answerIsTrue);
-                startActivityForResult(intent, REQUEST_CODE_CHEAT);
+                QuizActivity.this.startActivityForResult
+                        (CheatActivity.newIntent
+                                (QuizActivity.this, QuizActivity.this.mQuestionBank
+                                        [QuizActivity.this.mCurrentIndex].isAnswerTrue()), 0);
+
             }
         });
 
@@ -216,6 +227,9 @@ public class QuizActivity extends AppCompatActivity {
             } else if (!(userPressedTrue == answerIsTrue || this.mQuestionBank[this.mCurrentIndex].wasHintGiven())) {
                 this.mTotalMarks--;
                 Toast.makeText(getApplicationContext(), "-1 Marks", Toast.LENGTH_SHORT).show();
+            } else if (!(userPressedTrue == answerIsTrue) || this.mQuestionBank[this.mCurrentIndex].didUserCheat()) {
+                this.mTotalMarks -= 2;
+                Toast.makeText(getApplicationContext(), "-2 Marks", Toast.LENGTH_SHORT).show();
             }
             textView = (TextView) findViewById(R.id.total_marks);
             textView.setText("TOTAL MARKS: " + mTotalMarks);

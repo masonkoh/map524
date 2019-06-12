@@ -24,11 +24,11 @@
     <string name="warning_text_hint">Are you sure you want a hint?</string>
     <string name="show_hint_button">SHOW HINT</string>
     <string name="exit">EXIT</string>
-    <string name="hint_australia">A resident of Canberra is known as Canberran</string>
-    <string name="hint_oceans">There are more fish in the Pacific Ocean.</string>
-    <string name="hint_mideast">The Suez Canal connects two seas.</string>
-    <string name="hint_africa">Ask Omar for the answer.</string>
-    <string name="hint_americas">You can buy many books on the Amazon website.</string>
-    <string name="hint_asia">Lake Ontario is one of the five Great Lakes.</string>
+    <string name="hint_australia">1. The capital of Australia is not Sydney</string>
+    <string name="hint_oceans">2. There are more fish in the Pacific Ocean.</string>
+    <string name="hint_mideast">3. The Suez Canal Connects two seas.</string>
+    <string name="hint_africa">4. Ask Omar Sharif for the answer.</string>
+    <string name="hint_americas">5. You can buy many books on the Amazon website</string>
+    <string name="hint_asia">6. Lake Baikal is located in Russia.</string>
     <string name="question_completed">0</string>
 </resources>

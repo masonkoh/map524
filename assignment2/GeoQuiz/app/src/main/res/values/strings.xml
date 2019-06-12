@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">GeoQuiz</string>
+    <string name="question_australia">1. Canberra is the capital of Australia.</string>
+    <string name="question_oceans">2. The Pacific Ocean is larger than
+        the Atlantic Ocean.</string>
+    <string name="question_mideast">3. The Suez Canal connects the Red Sea
+        and the Indian Ocean.</string>
+    <string name="question_africa">4. The source of the Nile River is in Egypt.</string>
+    <string name="question_americas">5. The Amazon River is the longest river
+        in the Americas.</string>
+    <string name="question_asia">6. Lake Baikal is the world\'s oldest and deepest
+        freshwater lake.</string>
+    <string name="true_button">True</string>
+    <string name="false_button">False</string>
+    <string name="next_button">Next</string>
+    <string name="correct_toast">Correct!</string>
+    <string name="incorrect_toast">Incorrect!</string>
+    <string name="warning_text">Are you sure you want to do this?</string>
+    <string name="show_answer_button">Show Answer</string>
+    <string name="cheat_button">Cheat!</string>
+    <string name="judgment_toast">Cheating is wrong.</string>
+    <string name="hint_button">hint</string>
+    <string name="prev_button">prev</string>
+    <string name="warning_text_hint">Are you sure you want a hint?</string>
+    <string name="show_hint_button">SHOW HINT</string>
+    <string name="exit">EXIT</string>
+    <string name="hint_australia">A resident of Canberra is known as Canberran</string>
+    <string name="hint_oceans">There are more fish in the Pacific Ocean.</string>
+    <string name="hint_mideast">The Suez Canal connects two seas.</string>
+    <string name="hint_africa">Ask Omar for the answer.</string>
+    <string name="hint_americas">You can buy many books on the Amazon website.</string>
+    <string name="hint_asia">Lake Ontario is one of the five Great Lakes.</string>
+    <string name="question_completed">0</string>
+</resources>

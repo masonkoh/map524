@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#00ff00"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/hellotoronto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="HELLO TORONTO"
+            android:textColor="#000000"
+            android:textSize="25dp"
+            android:layout_gravity="center_vertical|center_horizontal"/>
+
+        <TextView
+            android:id="@+id/total_marks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TOTAL MARKS: 0"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="25dp"
+            android:layout_gravity="center_vertical|center_horizontal"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            >
+            <TextView
+                android:id="@+id/questions_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="QUESTION COMPLETED: "
+                android:textSize="25dp"
+                android:textColor="#000000"
+                 />
+
+            <TextView
+                android:id="@+id/questions_completed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="@string/question_completed"
+                android:textColor="#000000"
+                android:textSize="25dp"
+                 />
+        </LinearLayout>
+
+
+
+        <TextView
+            android:id="@+id/question_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ff00ff"
+            android:textSize="25dp"
+            android:textAlignment="center"
+
+            android:textColor="#000000"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:id="@+id/true_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/true_button"
+                android:background="#0000ff"
+                android:textColor="#ffffff"
+                android:layout_margin="3dp"/>
+
+            <Button
+                android:id="@+id/false_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/false_button"
+                android:background="#0000ff"
+                android:textColor="#ffffff"
+                android:layout_margin="3dp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/hint_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:background="#0000ff"
+                android:textColor="#ffffff"
+                android:text="@string/hint_button"
+                android:layout_margin="3dp"
+                />
+            <Button
+                android:id="@+id/cheat_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="@string/cheat_button"
+                android:background="#0000ff"
+                android:textColor="#ffffff"
+                android:layout_margin="3dp"
+                />
+
+
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/prev_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#0000ff"
+                android:drawableLeft="@drawable/arrow_left"
+
+                android:text="@string/prev_button"
+                android:textColor="#ffffff"
+                android:layout_margin="3dp"
+                />
+
+            <Button
+                android:id="@+id/next_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableRight="@drawable/arrow_right"
+
+                android:text="@string/next_button"
+                android:background="#0000ff"
+                android:textColor="#ffffff"
+                android:layout_margin="3dp"
+                />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</FrameLayout>

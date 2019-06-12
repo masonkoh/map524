@@ -24,13 +24,13 @@ public class QuizActivity extends AppCompatActivity {
     private Button mHintButton;
     private TextView mQuestionTextView;
 
-    private Question[] mQuestionBank = new Question[] {
-            new Question(R.string.question_australia, true, false,false,false, R.string.hint_australia),
-            new Question(R.string.question_oceans, true,false,false,false,R.string.hint_oceans),
-            new Question(R.string.question_mideast, false,false,false,false,R.string.question_oceans),
-            new Question(R.string.question_africa, false,false,false,false,R.string.hint_oceans),
-            new Question(R.string.question_americas, true,false,false,false,R.string.hint_oceans),
-            new Question(R.string.question_asia, true,false,false,false,R.string.hint_oceans),
+    private Question[] mQuestionBank = new Question[]{
+            new Question(R.string.question_australia, true, false, false, false, R.string.hint_australia),
+            new Question(R.string.question_oceans, true, false, false, false, R.string.hint_oceans),
+            new Question(R.string.question_mideast, false, false, false, false, R.string.question_oceans),
+            new Question(R.string.question_africa, false, false, false, false, R.string.hint_oceans),
+            new Question(R.string.question_americas, true, false, false, false, R.string.hint_oceans),
+            new Question(R.string.question_asia, true, false, false, false, R.string.hint_oceans),
     };
 
     private int mCurrentIndex = 0;
@@ -81,7 +81,7 @@ public class QuizActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 mCurrentIndex = (mCurrentIndex - 1);
-                if(mCurrentIndex == -1)
+                if (mCurrentIndex == -1)
                     mCurrentIndex = 5;
                 updateQuestion();
 
@@ -114,17 +114,32 @@ public class QuizActivity extends AppCompatActivity {
         updateQuestion();
     }
 
+    //    @Override
+//    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+//        if (resultCode != Activity.RESULT_OK) {
+//            return;
+//        }
+//
+//        if (requestCode == REQUEST_CODE_CHEAT) {
+//            if (data == null) {
+//                return;
+//            }
+//            mIsCheater = CheatActivity.wasAnswerShown(data);
+//        }
+//    }
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (resultCode != Activity.RESULT_OK) {
-            return;
-        }
-
-        if (requestCode == REQUEST_CODE_CHEAT) {
-            if (data == null) {
-                return;
+        if (resultCode == -1) {
+            if (requestCode == 0) {
+                if (data != null) {
+                    this.mQuestionBank[this.mCurrentIndex].setUserCheated(CheatActivity.wasAnswerShown(data));
+                } else {
+                    return;
+                }
             }
-            mIsCheater = CheatActivity.wasAnswerShown(data);
+            if (requestCode == 1 && data != null) {
+                this.mQuestionBank[this.mCurrentIndex].setHintGiven(activity_hint.wasHintShown(data));
+            }
         }
     }
 
@@ -170,39 +185,15 @@ public class QuizActivity extends AppCompatActivity {
         mQuestionTextView.setText(question);
     }
 
-//    private void checkAnswer(boolean userPressedTrue) {
-//        boolean answerIsTrue = mQuestionBank[mCurrentIndex].isAnswerTrue();
-//
-//        int messageResId = 0;
-//
-//        if (mIsCheater) {
-//            messageResId = R.string.judgment_toast;
-//        } else {
-//            if (userPressedTrue == answerIsTrue) {
-//                messageResId = R.string.correct_toast;
-//            } else {
-//                messageResId = R.string.incorrect_toast;
-//            }
-//        }
-//
-//        Toast.makeText(this, messageResId, Toast.LENGTH_SHORT)
-//                .show();
-//    }
 
-    private void checkAnswer(boolean userPressedTrue)
-    {
+    private void checkAnswer(boolean userPressedTrue) {
         boolean answerIsTrue = this.mQuestionBank[this.mCurrentIndex].isAnswerTrue();
 
-        if (this.mQuestionBank[this.mCurrentIndex].isComplete())
-        {
-            Toast.makeText(getApplicationContext(), "Question Completed!",Toast.LENGTH_SHORT).show();
-        }
-        else if (this.mQuestionBank[this.mCurrentIndex].didUserCheat())
-        {
+        if (this.mQuestionBank[this.mCurrentIndex].isComplete()) {
+            Toast.makeText(getApplicationContext(), "Question Completed!", Toast.LENGTH_SHORT).show();
+        } else if (this.mQuestionBank[this.mCurrentIndex].didUserCheat()) {
             Toast.makeText(getApplicationContext(), "Cheating is Wrong!", 0).show();
-        }
-        else
-        {
+        } else {
             this.mQuestionBank[this.mCurrentIndex].setCompleted(true);
             TextView textView = (TextView) findViewById(R.id.questions_completed);
 
@@ -215,7 +206,7 @@ public class QuizActivity extends AppCompatActivity {
 
             if (userPressedTrue == answerIsTrue && this.mQuestionBank[this.mCurrentIndex].wasHintGiven()) {
                 this.mTotalMarks++;
-                Toast.makeText(getApplicationContext(),"+1 Marks",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "+1 Marks", Toast.LENGTH_SHORT).show();
             } else if (userPressedTrue == answerIsTrue && !this.mQuestionBank[this.mCurrentIndex].wasHintGiven()) {
                 this.mTotalMarks += 2;
                 Toast.makeText(getApplicationContext(), "+2 Marks", Toast.LENGTH_SHORT).show();

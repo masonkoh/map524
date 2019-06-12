@@ -67,34 +67,6 @@ public class Question {
         this.mHintId = textHintId;
     }
 
-//    public int getTextResId() {
-//        return mTextResId;
-//    }
-//
-//    public void setTextResId(int textResId) {
-//        mTextResId = textResId;
-//    }
-//
-//    public boolean isAnswerTrue() {
-//        return mAnswerTrue;
-//    }
-//
-//    public void setAnswerTrue(boolean answerTrue) {
-//        mAnswerTrue = answerTrue;
-//    }
-//
-//    public boolean isComplete() {
-//        return this.mCompleted;
-//    }
-//    public boolean didUserCheat()
-//    {
-//        return this.mUserCheated;
-//    }
-//    public void setCompleted(boolean completed) {
-//        this.mCompleted = completed;
-//    }
-//    public boolean wasHintGiven(){
-//        return this.mHintGiven;
-//    }
+
 
 }

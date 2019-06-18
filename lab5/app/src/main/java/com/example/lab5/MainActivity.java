@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
     String[] arrayTextRight1 = {"cigarette", "house", "desk", "magic", "light", "hand", "acoustic", "smocking", "hair", "snoopy", "stop", "floppy"};
     String[] arrayTextRight2 = {
             "lighter", "home", "lamp", "man", "bulb", "cuffs", "guitar", "gun", "dryer", "dog", "watch", "disk"};
-    String[] arrayTextRight3 = {"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K"};
+    String[] arrayTextRight3 = {"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L"};
     Integer[] arrayImgRight = {R.drawable.cigarette, R.drawable.house, R.drawable.desk, R.drawable.magic, R.drawable.light, R.drawable.hand,
             R.drawable.acoustic, R.drawable.smocking, R.drawable.hair, R.drawable.dog, R.drawable.stop, R.drawable.floppy};
 
@@ -64,12 +64,12 @@ public class MainActivity extends AppCompatActivity {
                 intent.putExtra("itemname1", arrayTextRight1[position]);
                 intent.putExtra("itemname2", arrayTextRight2[position]);
                 intent.putExtra("itemname3", arrayTextRight3[position]);
-                intent.putExtra("imgid", arrayImgRight[position]);
+                intent.putExtra("imgid", arrayImgRight[position].toString());
                 startActivity(intent);
             }
         });
     }
-}/**/
+}
 
 
 class CustomListAdapter1 extends ArrayAdapter<String> {
@@ -91,7 +91,7 @@ class CustomListAdapter1 extends ArrayAdapter<String> {
         LayoutInflater inflater = context.getLayoutInflater();
         View rowView = inflater.inflate(R.layout.textviewitem1, null, true);
         TextView textview1_leftside = rowView.findViewById(R.id.textview1_leftside);
-        TextView textview2_leftside = rowView.findViewById(R.id.textview2_leftside);
+        TextView textview2_leftside = rowView.findViewById(R.id.textview1_rightside);
         ImageView imageview1_leftside = rowView.findViewById(R.id.imageview_leftside);
 
         textview1_leftside.setText(name1[position]);

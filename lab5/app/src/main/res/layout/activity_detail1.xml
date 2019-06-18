@@ -15,18 +15,18 @@
         <ImageView
             android:layout_width="120dp"
             android:layout_height="120dp"
-            android:id="@+id/img_view1" />
+            android:id="@+id/imgview_leftside" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="25dp"
-            android:id="@+id/txt_view1"/>
+            android:id="@+id/textview1_leftside"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="25dp"
-            android:id="@+id/txt_view2"/>
+            android:id="@+id/textview1_rightside"/>
 
 
     </LinearLayout>

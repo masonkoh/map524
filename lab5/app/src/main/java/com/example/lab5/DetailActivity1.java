@@ -18,13 +18,13 @@ public class DetailActivity1 extends AppCompatActivity {
         String stringData1 = intent.getStringExtra("itemname1");
         String stringData2 = intent.getStringExtra("itemname2");
         String integerData1 = intent.getStringExtra("imgid");
-        textView1 = findViewById(R.id.txt_view1);
-        textView2 = findViewById(R.id.txt_view2);
+        Integer imageValue = new Integer(integerData1);
+
+        textView1 = findViewById(R.id.textview1_leftside);
+        textView2 = findViewById(R.id.textview1_rightside);
         textView1.setText(stringData1);
         textView2.setText(stringData2);
-
-        Integer imageValue = new Integer(integerData1);
-        imageView = findViewById(R.id.img_view1);
+        imageView = findViewById(R.id.imgview_leftside);
         imageView.setImageResource(imageValue);
     }/**/
 }

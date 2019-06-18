@@ -25,7 +25,7 @@
             android:textSize="25dp" />
 
         <TextView
-            android:id="@+id/textview2_leftside"
+            android:id="@+id/textview1_rightside"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="0.5"

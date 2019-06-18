@@ -16,6 +16,7 @@
             android:layout_height="wrap_content"
             android:background="#00ff00"
             android:text="@string/hello_toronto"
+            android:textSize="25dp"
             android:textAlignment="center"
             android:textColor="#0000ff"
 

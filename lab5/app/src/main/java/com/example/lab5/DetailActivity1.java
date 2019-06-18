@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class DetailActivity extends AppCompatActivity {
+public class DetailActivity1 extends AppCompatActivity {
     TextView textView;
     ImageView imageView;
     @Override
@@ -14,12 +14,14 @@ public class DetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
         Intent intent = getIntent();
-        String stringData = intent.getStringExtra("itemname");
-        textView = findViewById(R.id.txt_view);
-        textView.setText(stringData);
+        String stringData1 = intent.getStringExtra("itemname1");
+        String stringData2 = intent.getStringExtra("itemname2");
+        String integerData1 = intent.getStringExtra("imgid");
+        textView = findViewById(R.id.txt_view1);
+        textView.setText(stringData1);
 
-        stringData = intent.getStringExtra("imgid");
-        Integer imageValue = new Integer(stringData);
+
+        Integer imageValue = new Integer(integerData1);
         imageView = findViewById(R.id.img_view1);
         imageView.setImageResource(imageValue);
     }

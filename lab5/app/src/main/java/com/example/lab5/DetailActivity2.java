@@ -15,6 +15,8 @@ public class DetailActivity2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail2);
         Intent intent = getIntent();
-        String stringData = intent.getStringExtra("itemname1");
+        String stringData1 = intent.getStringExtra("itemname1");
+        String stringData2 = intent.getStringExtra("itemname2");
+
     }
 }

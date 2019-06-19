@@ -1,5 +1,4 @@
 package com.example.lab5;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -17,7 +16,7 @@ public class DetailActivity2 extends AppCompatActivity {
         String stringData2 = intent.getStringExtra("itemname2");
         String stringData3 = intent.getStringExtra("itemname3");
         String integerData = intent.getStringExtra("imgid");
-        Integer imageValue = new Integer(integerData);
+        Integer imageValue = Integer.valueOf(integerData);
 
         TextView textview1 = findViewById(R.id.textview1_rightside);
         TextView textview2 = findViewById(R.id.textview2_rightside);

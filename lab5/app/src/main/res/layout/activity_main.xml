@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -16,33 +15,32 @@
             android:layout_height="wrap_content"
             android:background="#00ff00"
             android:text="@string/hello_toronto"
-            android:textSize="25dp"
             android:textAlignment="center"
             android:textColor="#0000ff"
+            android:textSize="25sp"
 
             />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:baselineAligned="false"
+            >
 
             <ListView
                 android:id="@+id/listview_left"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.5"
-                android:background="#ff0000"
-                >
-            </ListView>
+                android:background="#ff0000"/>
 
             <ListView
                 android:id="@+id/listview_right"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.5"
-                android:background="#ff00ff"
-                >
+                android:background="#ff00ff">
 
             </ListView>
 

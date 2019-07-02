@@ -56,6 +56,7 @@
                         android:paddingLeft="35sp"
                         android:paddingRight="35sp"
                         android:text="@string/textview_id"
+                        android:textColor="#0000ff"
                         android:textSize="20sp"
 
                         />
@@ -65,10 +66,11 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:hint="@string/edittext_id"
+                        android:importantForAutofill="no"
                         android:inputType=""
+                        android:maxLength="8"
                         android:paddingLeft="35sp"
-                        android:paddingRight="35sp"
-                        android:importantForAutofill="no" />
+                        android:paddingRight="35sp" />
 
                 </LinearLayout>
 
@@ -85,19 +87,19 @@
                         android:paddingLeft="35sp"
                         android:paddingRight="35sp"
                         android:text="@string/textview_name"
-                        android:textSize="20sp"
-
-                        />
+                        android:textColor="#0000ff"
+                        android:textSize="20sp" />
 
                     <EditText
                         android:id="@+id/edittext_name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:hint="@string/edittext_name"
+                        android:importantForAutofill="no"
                         android:inputType=""
+                        android:maxLength="8"
                         android:paddingLeft="35sp"
-                        android:paddingRight="35sp"
-                        android:importantForAutofill="no" />
+                        android:paddingRight="35sp" />
 
                 </LinearLayout>
 
@@ -114,6 +116,7 @@
                         android:paddingLeft="35sp"
                         android:paddingRight="35sp"
                         android:text="@string/textview_marks"
+                        android:textColor="#0000ff"
                         android:textSize="20sp"
 
                         />
@@ -123,10 +126,11 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:hint="@string/edittext_marks"
+                        android:importantForAutofill="no"
                         android:inputType=""
+                        android:maxLength="8"
                         android:paddingLeft="35sp"
-                        android:paddingRight="35sp"
-                        android:importantForAutofill="no" />
+                        android:paddingRight="35sp" />
 
                 </LinearLayout>
 
@@ -145,8 +149,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="25sp"
                     android:layout_marginRight="25sp"
-                    android:text="@string/button_add"
-                    />
+                    android:text="@string/button_add" />
 
                 <Button
                     android:id="@+id/button_view"
@@ -154,8 +157,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="25sp"
                     android:layout_marginRight="25sp"
-                    android:text="@string/button_view"
-                    />
+                    android:text="@string/button_view" />
 
                 <Button
                     android:id="@+id/button_find"
@@ -163,8 +165,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="25sp"
                     android:layout_marginRight="25sp"
-                    android:text="@string/button_find"
-                    />
+                    android:text="@string/button_find" />
 
                 <Button
                     android:id="@+id/button_delete"
@@ -172,8 +173,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="25sp"
                     android:layout_marginRight="25sp"
-                    android:text="@string/button_delete"
-                    />
+                    android:text="@string/button_delete" />
             </LinearLayout>
 
         </LinearLayout>

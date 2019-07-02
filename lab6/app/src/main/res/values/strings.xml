@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">lab6</string>
+    <string name="hello_toronto">Hello Toronto</string>
+    <string name="textview_id">ID</string>
+    <string name="edittext_id">ID</string>
+    <string name="edittext_name">Name</string>
+    <string name="textview_name">Name</string>
+    <string name="edittext_marks">Marks</string>
+    <string name="textview_marks">Marks</string>
+    <string name="button_view">VIEW ALL STUDENTS</string>
+    <string name="button_find">FIND STUDENT(USING ID)</string>
+    <string name="button_delete">DELETE STUDENT(USING ID)</string>
+    <string name="button_add">ADD NEW STUDENT</string>
 </resources>

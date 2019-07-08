@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d3413d2b-f820-48b0-b8d0-ca578ceb142c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/GeoQuiz/app/src/main/java/com/bignerdranch/android/geoquiz/CheatActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/GeoQuiz/app/src/main/java/com/bignerdranch/android/geoquiz/CheatActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GeoQuiz/app/src/main/java/com/bignerdranch/android/geoquiz/Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/GeoQuiz/app/src/main/java/com/bignerdranch/android/geoquiz/Question.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GeoQuiz/app/src/main/java/com/bignerdranch/android/geoquiz/QuizActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/GeoQuiz/app/src/main/java/com/bignerdranch/android/geoquiz/QuizActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,10 +20,26 @@
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
-    <navigator proportions="" version="1">
+    <navigator currentView="ProjectPane" proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="assignment2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="assignment2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="assignment2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="assignment2" type="462c0819:PsiDirectoryNode" />
+              <item name="GeoQuiz" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="Scope" />
       <pane id="AndroidView">
         <subPane>
@@ -39,7 +53,6 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">

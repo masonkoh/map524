@@ -34,7 +34,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.5"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:background="#ff423d">
 
                 <TextView
                     android:layout_width="match_parent"
@@ -42,32 +43,47 @@
                     android:text="Name"
                     android:textAlignment="textStart"
                     android:textStyle="bold" />
+
                 <EditText
+                    android:id="@+id/editText_name_left"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:maxLength="8"
+                    android:hint="Name"
+                    android:maxLength="8" />
 
-                    android:hint="Name"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="DEPT"
                     android:textAlignment="textStart"
                     android:textStyle="bold" />
+
                 <EditText
+                    android:id="@+id/editText_dept_left"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="DEPT"/>
+                    android:hint="DEPT"
+                    android:maxLength="8" />
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="YEAR"
                     android:textAlignment="textStart"
                     android:textStyle="bold" />
+
                 <EditText
+                    android:id="@+id/editText_year_left"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="YEAR"/>
+                    android:hint="YEAR"
+                    android:maxLength="8" />
+
+                <Button
+                    android:id="@+id/btn_add_left"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="add" />
 
 
             </LinearLayout>
@@ -76,7 +92,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.5"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:background="#ab62ce">
 
                 <TextView
                     android:layout_width="match_parent"
@@ -84,45 +101,64 @@
                     android:text="Name"
                     android:textAlignment="textStart"
                     android:textStyle="bold" />
+
                 <EditText
+                    android:id="@+id/editText_name_right"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:maxLength="8"
+                    android:hint="Name"
 
-                    android:hint="Name"/>
+                    android:maxLength="8" />
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="DEPT"
                     android:textAlignment="textStart"
                     android:textStyle="bold" />
+
                 <EditText
+                    android:id="@+id/editText_dept_right"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="DEPT"/>
+                    android:hint="DEPT"
+                    android:maxLength="8" />
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="YEAR"
                     android:textAlignment="textStart"
                     android:textStyle="bold" />
+
                 <EditText
+                    android:id="@+id/editText_year_right"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="YEAR"/>
+                    android:hint="YEAR"
+                    android:maxLength="8" />
+
+                <Button
+                    android:id="@+id/btn_add_right"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="add" />
 
 
             </LinearLayout>
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            
+            android:layout_height="match_parent"
+            android:background="#ffbb16">
+
             <Button
+                android:id="@+id/btn_view"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="View"/>
-            
+                android:layout_height="wrap_content"
+                android:text="View" />
+
         </LinearLayout>
     </LinearLayout>
 

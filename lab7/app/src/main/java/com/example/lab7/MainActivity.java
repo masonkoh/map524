@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
         btn_add_right.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                sqLiteDatabase1.execSQL("INSERT INTO rightTable VALUES('" + editText_name_right.getText() + "', '" + editText_dept_right.getText() + "', '" + editText_year_left.getText() + "');");
+                sqLiteDatabase1.execSQL("INSERT INTO rightTable VALUES('" + editText_name_right.getText() + "', '" + editText_dept_right.getText() + "', '" + editText_year_right.getText() + "');");
                 editText_name_right.setText("");
                 editText_dept_right.setText("");
                 editText_year_right.setText("");
@@ -71,8 +71,8 @@ public class MainActivity extends AppCompatActivity {
                 int index2 = 0;
                 while (cursorSelectAll2.moveToNext()) {
                     itemNameRight[index2] = cursorSelectAll2.getString(0);
-                    itemNameLeft[index2] = cursorSelectAll2.getString(1);
-                    itemNameLeft[index2] = cursorSelectAll2.getString(2);
+                    itemDeptRight[index2] = cursorSelectAll2.getString(1);
+                    itemYearRight[index2] = cursorSelectAll2.getString(2);
                     index2++;
                 }
 

@@ -17,6 +17,8 @@ public class MainActivity extends AppCompatActivity {
         Button add_btn;
         Button exit_btn;
         LinearLayout list_linearLayout = findViewById(R.id.list_linearLayout);
+        DatabaseHandler databaseHandler1 = new DatabaseHandler(getApplicationContext());
+        
 
 
     }

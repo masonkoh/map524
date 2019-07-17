@@ -1,18 +1,19 @@
 package com.example.assignment3;
 
-        import android.content.ContentValues;
-        import android.content.Context;
-        import android.database.Cursor;
-        import android.database.sqlite.SQLiteDatabase;
-        import android.database.sqlite.SQLiteOpenHelper;
+import android.content.ContentValues;
+import android.content.Context;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
+import android.database.sqlite.SQLiteTableLockedException;
 
-        import java.util.ArrayList;
-        import java.util.List;
+import java.util.ArrayList;
+import java.util.List;
 
 public class DatabaseHandler extends SQLiteOpenHelper {
     public DatabaseHandler(Context context) {
         super(context, "spinnerExample", null, 1);
-        // mknote: why is name "spinnerExample"?
+        // mknote warning: why is name "spinnerExample"?
     }
 
     @Override
@@ -38,18 +39,81 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         db3.close();
     }
 
-    public List<String> getAllItems0(){
-        List<String> listItem2 = new ArrayList<>();
+    public List<String> getAllItems0() {
+        List<String> listItem = new ArrayList<>();
         String selectQuery = "SELECT * FROM items";
         SQLiteDatabase db4 = this.getReadableDatabase();
         Cursor cursor = db4.rawQuery(selectQuery, null);
-        if(cursor.moveToFirst()){
-            do{
-
-            }
+        if (cursor.moveToFirst()) {
+            do {
+                listItem.add(cursor.getString(1));
+            } while (cursor.moveToNext());
         }
+        cursor.close();
+        db4.close();
+        return listItem;
     }
 
+    public List<String> getAllItem1() {
+        List<String> listItem = new ArrayList<>();
+        String selectQuery = "SELECT * FROM items";
+        SQLiteDatabase db4 = this.getReadableDatabase();
+        Cursor cursor = db4.rawQuery(selectQuery, null);
+        if (cursor.moveToFirst()) {
+            do {
+                listItem.add(cursor.getString(2));
+            } while (cursor.moveToNext());
+        }
+        cursor.close();
+        db4.close();
+        return listItem;
+    }
+
+
+    public List<String> getAllItem2() {
+        List<String> listItem = new ArrayList<>();
+        String selectQuery = "SELECT * FROM items";
+        SQLiteDatabase db4 = this.getReadableDatabase();
+        Cursor cursor = db4.rawQuery(selectQuery, null);
+        if (cursor.moveToFirst()) {
+            do {
+                listItem.add(cursor.getString(3));
+            } while (cursor.moveToNext());
+        }
+        cursor.close();
+        db4.close();
+        return listItem;
+    }
+
+    public List<String> getAllItem3() {
+        List<String> listItem = new ArrayList<>();
+        String selectQuery = "SELECT * FROM items";
+        SQLiteDatabase db4 = this.getReadableDatabase();
+        Cursor cursor = db4.rawQuery(selectQuery, null);
+        if (cursor.moveToFirst()) {
+            do {
+                listItem.add(cursor.getString(4));
+            } while (cursor.moveToNext());
+        }
+        cursor.close();
+        db4.close();
+        return listItem;
+    }
+
+    public List<String> getAllItem4() {
+        List<String> listItem = new ArrayList<>();
+        String selectQuery = "SELECT * FROM items";
+        SQLiteDatabase db4 = this.getReadableDatabase();
+        Cursor cursor = db4.rawQuery(selectQuery, null);
+        if (cursor.moveToFirst()) {
+            do {
+                listItem.add(cursor.getString(5));
+            } while (cursor.moveToNext());
+        }
+        cursor.close();
+        db4.close();
+        return listItem;
+    }
 
 
 }

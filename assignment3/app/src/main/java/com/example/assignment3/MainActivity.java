@@ -6,6 +6,8 @@ package com.example.assignment3;
         import android.widget.LinearLayout;
         import android.widget.ListView;
 
+        import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -18,7 +20,9 @@ public class MainActivity extends AppCompatActivity {
         Button exit_btn;
         LinearLayout list_linearLayout = findViewById(R.id.list_linearLayout);
         DatabaseHandler databaseHandler1 = new DatabaseHandler(getApplicationContext());
-        
+
+        List<String> listItem0 = databaseHandler1.getAllItem1()
+
 
 
     }

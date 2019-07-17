@@ -54,7 +54,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         return listItem;
     }
 
-    public List<String> getAllItem1() {
+    public List<String> getAllItems1() {
         List<String> listItem = new ArrayList<>();
         String selectQuery = "SELECT * FROM items";
         SQLiteDatabase db4 = this.getReadableDatabase();
@@ -70,7 +70,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     }
 
 
-    public List<String> getAllItem2() {
+    public List<String> getAllItems2() {
         List<String> listItem = new ArrayList<>();
         String selectQuery = "SELECT * FROM items";
         SQLiteDatabase db4 = this.getReadableDatabase();
@@ -85,7 +85,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         return listItem;
     }
 
-    public List<String> getAllItem3() {
+    public List<String> getAllItems3() {
         List<String> listItem = new ArrayList<>();
         String selectQuery = "SELECT * FROM items";
         SQLiteDatabase db4 = this.getReadableDatabase();
@@ -100,7 +100,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         return listItem;
     }
 
-    public List<String> getAllItem4() {
+    public List<String> getAllItems4() {
         List<String> listItem = new ArrayList<>();
         String selectQuery = "SELECT * FROM items";
         SQLiteDatabase db4 = this.getReadableDatabase();

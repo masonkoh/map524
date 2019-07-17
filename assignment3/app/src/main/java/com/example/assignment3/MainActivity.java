@@ -16,6 +16,8 @@ public class MainActivity extends AppCompatActivity {
         ListView listView;
         Button add_btn;
         Button exit_btn;
-        LinearLayout linearLayout;
+        LinearLayout list_linearLayout = findViewById(R.id.list_linearLayout);
+
+
     }
 }

@@ -12,8 +12,8 @@ import java.util.List;
 
 public class DatabaseHandler extends SQLiteOpenHelper {
     public DatabaseHandler(Context context) {
-        super(context, "spinnerExample", null, 1);
-        // mknote warning: why is name "spinnerExample"?
+        super(context, "mkTempName", null, 1);
+
     }
 
     @Override

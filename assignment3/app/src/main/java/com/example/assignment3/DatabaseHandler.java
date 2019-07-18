@@ -5,7 +5,6 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.database.sqlite.SQLiteTableLockedException;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,14 +26,14 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         onCreate(db2);
     }
 
-    public void insertItem(String itemA, String itemB, String itemC, String itemD, String itemE) {
+    public void insertItem(String itemCity, String itemName, String itemSport, String itemMvp, String itemStadium) {
         SQLiteDatabase db3 = this.getWritableDatabase();
         ContentValues values = new ContentValues();
-        values.put("name0", itemA);
-        values.put("name1", itemB);
-        values.put("name2", itemC);
-        values.put("name3", itemD);
-        values.put("name4", itemE);
+        values.put("name0", itemCity);
+        values.put("name1", itemName);
+        values.put("name2", itemSport);
+        values.put("name3", itemMvp);
+        values.put("name4", itemStadium);
         db3.insert("items", null, values);
         db3.close();
     }

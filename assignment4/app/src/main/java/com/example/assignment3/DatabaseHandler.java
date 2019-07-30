@@ -9,7 +9,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DatabaseHandler extends SQLiteOpenHelper {/**/
+public class DatabaseHandler extends SQLiteOpenHelper {
     public DatabaseHandler(Context context) {
         super(context, "mkTempName", null, 1);
 
@@ -26,14 +26,14 @@ public class DatabaseHandler extends SQLiteOpenHelper {/**/
         onCreate(db2);
     }
 
-    public void insertItem(String itemCity, String itemName, String itemSport, String itemMvp, String itemStadium) {
+    public void insertItem(String itemCity, String itemName, String itemSport, String itemMvp, String itemImage) {
         SQLiteDatabase db3 = this.getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put("name0", itemCity);
         values.put("name1", itemName);
         values.put("name2", itemSport);
         values.put("name3", itemMvp);
-        values.put("name4", itemStadium);
+        values.put("name4", itemImage);
         db3.insert("items", null, values);
         db3.close();
     }

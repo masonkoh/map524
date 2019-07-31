@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -37,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         final String[] listItem_stringArray2 = listItem_listString2.toArray(new String[0]);
         List<String> listItem_listString3 = databaseHandler1.getAllItems3();
         final String[] listItem_stringArray3 = listItem_listString3.toArray(new String[0]);
-        List<String> listItem_listString4 = databaseHandler1.getAllItems4();
+        final List<String> listItem_listString4 = databaseHandler1.getAllItems4();
         final String[] listItem_stringArray4 = listItem_listString4.toArray(new String[0]);
 
         CustomListAdapter adapter = new CustomListAdapter(this, listItem_stringArray0, listItem_stringArray1, listItem_stringArray2, listItem_stringArray3, listItem_stringArray4);
@@ -46,13 +47,15 @@ public class MainActivity extends AppCompatActivity {
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                SecondActivity.stringDataName64 = listItem_stringArray4[position];
                 Intent intent = new Intent(MainActivity.this, SecondActivity.class);
                 intent.putExtra("itemname0", listItem_stringArray0[position]);
                 intent.putExtra("itemname1", listItem_stringArray1[position]);
                 intent.putExtra("itemname2", listItem_stringArray2[position]);
                 intent.putExtra("itemname3", listItem_stringArray3[position]);
-                intent.putExtra("itemname4", listItem_stringArray4[position]);
+                intent.putExtra("itemname4", listItem_stringArray0[position]);
                 intent.putExtra("command", "ud");
+                Log.d("mklog", "before start intent.....!");
                 startActivity(intent);
             }
         });
@@ -75,8 +78,7 @@ public class MainActivity extends AppCompatActivity {
         exit_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finish();
-                System.exit(0);
+                finishAffinity();
             }
         });
 

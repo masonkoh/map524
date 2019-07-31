@@ -6,6 +6,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import java.sql.SQLInput;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -112,6 +113,12 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         cursor.close();
         db4.close();
         return listItem;
+    }
+
+    public void deleteItem(String deleteItemTarget) {
+        SQLiteDatabase db5 = this.getWritableDatabase();
+        db5.delete("items", "name0 = '" + deleteItemTarget + "'", null);
+        db5.close();
     }
 
 

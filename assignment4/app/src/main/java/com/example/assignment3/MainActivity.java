@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ListView list;
+        ListView list_listview;
         Button add_btn = findViewById(R.id.add_btn);
         Button exit_btn = findViewById(R.id.exit_btn);
         LinearLayout list_linearLayout = findViewById(R.id.list_linearLayout);
@@ -42,19 +42,19 @@ public class MainActivity extends AppCompatActivity {
         final String[] listItem_stringArray4 = listItem_listString4.toArray(new String[0]);
 
         CustomListAdapter adapter = new CustomListAdapter(this, listItem_stringArray0, listItem_stringArray1, listItem_stringArray2, listItem_stringArray3, listItem_stringArray4);
-        list = findViewById(R.id.list1_listview);
-        list.setAdapter(adapter);
-        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        list_listview = findViewById(R.id.list1_listview);
+        list_listview.setAdapter(adapter);
+        list_listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                SecondActivity.stringDataName64 = listItem_stringArray4[position];
+                SecondActivity.stringDataName64_string = listItem_stringArray4[position];
                 Intent intent = new Intent(MainActivity.this, SecondActivity.class);
                 intent.putExtra("itemname0", listItem_stringArray0[position]);
                 intent.putExtra("itemname1", listItem_stringArray1[position]);
                 intent.putExtra("itemname2", listItem_stringArray2[position]);
                 intent.putExtra("itemname3", listItem_stringArray3[position]);
                 intent.putExtra("itemname4", listItem_stringArray0[position]);
-                intent.putExtra("command", "ud");
+                intent.putExtra("command", "update");
                 Log.d("mklog", "before start intent.....!");
                 startActivity(intent);
             }

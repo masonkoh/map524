@@ -24,7 +24,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.ByteArrayOutputStream;
-import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.List;
 
@@ -34,7 +33,7 @@ public class SecondActivity extends AppCompatActivity {
 
     String string1;
     String imgDecodableString;
-    public static String stringDataName64;
+    public static String stringDataName64_string;
     Boolean bool_spinner = true;
     ImageView image;
     byte[] imageArray = null;
@@ -232,7 +231,7 @@ public class SecondActivity extends AppCompatActivity {
             image.setImageBitmap(BitmapFactory.decodeByteArray(imageArray, 0, imageArray.length));
             // setting default image END!
         }
-        if (stringDataCommand.equals("ud")) {
+        if (stringDataCommand.equals("update")) {
             submit_btn.setVisibility(View.GONE);
 //            delete_btn.setEnabled(false);
 //            update_btn.setEnabled(false);
@@ -240,7 +239,7 @@ public class SecondActivity extends AppCompatActivity {
             delete_btn.setVisibility(View.VISIBLE);
             upper_linearlayout.setBackgroundColor(Color.parseColor("#FF423D"));
             lower_linearlayout.setBackgroundColor(Color.parseColor("#0098CE"));
-            byte[] decodedString = Base64.decode(stringDataName64, Base64.DEFAULT);
+            byte[] decodedString = Base64.decode(stringDataName64_string, Base64.DEFAULT);
             Bitmap bitmap64 = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
             image.setImageBitmap(bitmap64);
 

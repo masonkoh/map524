@@ -35,7 +35,7 @@
                 android:layout_height="wrap_content"
                 android:background="@android:color/transparent"
                 android:text="@string/add_team"
-                android:textColor="#FFBC16"/>
+                android:textColor="#FFBC16" />
 
 
             <Button
@@ -45,7 +45,7 @@
                 android:layout_height="wrap_content"
                 android:background="@android:color/transparent"
                 android:text="@string/exit"
-                android:textColor="#FFBC16"/>
+                android:textColor="#FFBC16" />
 
         </LinearLayout>
 

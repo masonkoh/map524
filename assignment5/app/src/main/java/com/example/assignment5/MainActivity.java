@@ -71,12 +71,11 @@ public class MainActivity extends AppCompatActivity {
         public View getView(int position, View view, ViewGroup parent) {
             LayoutInflater inflater = context.getLayoutInflater();
             View rowView = inflater.inflate(R.layout.earthquake_listdetail, null, true);
-            String earthInfo[] = itemname1.get(position).split("@@");
+            String earthInfo[] = itemname1.get(position).split("__");
             TextView textInfo1 = rowView.findViewById(R.id.listdetail1_textview);
             textInfo1.setText(earthInfo[0]);
             TextView textInfo2 = rowView.findViewById(R.id.listdetail2_textview);
             textInfo2.setText(new Date(Long.parseLong(earthInfo[1])).toString());
-
 
             if (position % 2 == 0) {
                 textInfo1.setBackgroundColor(Color.parseColor("#98CE00"));
@@ -84,9 +83,6 @@ public class MainActivity extends AppCompatActivity {
             if (position % 2 == 0) {
                 textInfo2.setBackgroundColor(Color.parseColor("#98CE00"));
             }
-
-
-
 
             return rowView;
 
